@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f92dca6b0b8ca69708e45a35a49e4caf",
+    "content-hash": "22cb93219cac97082f760393a09b1350",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1577,6 +1577,71 @@
                 }
             ],
             "time": "2021-01-18T20:58:21+00:00"
+        },
+        {
+            "name": "mawuekom/laravel-custom-view-components",
+            "version": "v2.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mawuva/laravel-custom-view-components.git",
+                "reference": "d517136448622bdfdc214440ff83156b0ce4121a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mawuva/laravel-custom-view-components/zipball/d517136448622bdfdc214440ff83156b0ce4121a",
+                "reference": "d517136448622bdfdc214440ff83156b0ce4121a",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.0",
+                "illuminate/support": "^8.0",
+                "illuminate/view": "^8.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Mawuekom\\Customponents\\CustomponentsServiceProvider"
+                    ],
+                    "aliases": {
+                        "Customponents": "Mawuekom\\Customponents\\CustomponentsFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Mawuekom\\Customponents\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ephraïm Seddor",
+                    "email": "seddorephraim7@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A bunch of commons view components you usually use in your laravel project",
+            "homepage": "https://github.com/mawuekom/laravel-custom-view-components",
+            "keywords": [
+                "laravel",
+                "laravel-custom-view-components",
+                "mawuekom",
+                "view-components"
+            ],
+            "support": {
+                "issues": "https://github.com/mawuva/laravel-custom-view-components/issues",
+                "source": "https://github.com/mawuva/laravel-custom-view-components/tree/v2.0.2"
+            },
+            "time": "2021-09-07T02:21:20+00:00"
         },
         {
             "name": "monolog/monolog",
