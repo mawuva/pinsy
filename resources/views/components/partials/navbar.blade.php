@@ -11,21 +11,32 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link to-app-text-on-hover" href="{{ url('/') }}">{{ __('pages.home.name') }}</a>
+                    <a class="nav-link to-app-text-on-hover" href="{{ url('/') }}">
+                        {{ __('pages.home.name') }}
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    <a class="nav-link dropdown-toggle to-app-text-on-hover" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">
-                        Dropdown
+                        @php
+                            $currentLocaleCode = (LaravelLocalization::getCurrentLocale() === 'en') ? 'gb' : LaravelLocalization::getCurrentLocale();
+                        @endphp
+                        <span class="flag-icon flag-icon-{{ $currentLocaleCode }}"></span>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}"
+                                href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                @php
+                                    $localeCode = ($localeCode === 'en') ? 'gb' : $localeCode;
+                                @endphp
+                                <span class="flag-icon flag-icon-{{ $localeCode }}"></span>
+                                {{ ucfirst($properties['native']) }}
+                            </a>
+                        @endforeach
                     </div>
                 </li>
             </ul>
