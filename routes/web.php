@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\PasswordForgotController;
+use App\Http\Controllers\Auth\PasswordResetController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
@@ -32,5 +34,15 @@ Route::group([
     Route::group(['prefix' =>'login'], function() {
         Route::get('/', [LoginController::class, 'view']) ->name('auth.login');
         Route::post('/', [LoginController::class, 'handle']) ->name('auth.login');
+    });
+
+    Route::prefix('/forgot-password')->group(function () {
+        Route::get('/', [PasswordForgotController::class, 'view']) ->name('password.request');
+        Route::post('/', [PasswordForgotController::class, 'handle']) ->name('password.email');
+    });
+
+    Route::prefix('/reset-password')->group(function () {
+        Route::get('/{token}', [PasswordResetController::class, 'view']) ->name('password.reset');
+        Route::post('/', [PasswordResetController::class, 'handle']) ->name('password.update');
     });
 });

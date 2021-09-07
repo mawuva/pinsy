@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Mawuekom\Passauth\Http\Requests\LoginUserRequest;
+use Mawuekom\Passauth\Services\LoginUser;
 
 class LoginController extends Controller
 {
@@ -22,9 +26,9 @@ class LoginController extends Controller
      * 
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function handle()
+    public function handle(LoginUser $loginUser, LoginUserRequest $request)
     {
-        /*try {
+        try {
             $user = $loginUser($request ->validated());
         }
 
@@ -37,7 +41,6 @@ class LoginController extends Controller
         Auth::login($user['data']);
         
         return redirect() ->route('home')
-                          ->with($user['status'], $user['message']);*/
-
+                          ->with($user['status'], $user['message']);
     }
 }
