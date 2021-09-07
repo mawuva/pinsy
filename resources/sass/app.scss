@@ -6,3 +6,15 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.app-bg {
+    background-color: #eb290e !important;
+}
+
+.app-text {
+    color: #eb290e !important;
+}
+
+.to-app-text-on-hover:hover {
+    color: #eb290e !important;
+}

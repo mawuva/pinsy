@@ -10002,3 +10002,14 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.app-bg {
+  background-color: #eb290e !important;
+}
+
+.app-text {
+  color: #eb290e !important;
+}
+
+.to-app-text:hover {
+  color: #eb290e !important;
+}
