@@ -13,6 +13,7 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
         "mawuekom/laravel-custom-view-components": "^2.0",
+        "mawuekom/laravel-passauth": "^1.6",
         "mcamara/laravel-localization": "^1.6"
     },
     "require-dev": {
