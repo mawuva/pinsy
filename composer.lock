@@ -1998,16 +1998,16 @@
         },
         {
             "name": "mawuekom/laravel-custom-view-components",
-            "version": "v2.0.2",
+            "version": "v2.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mawuva/laravel-custom-view-components.git",
-                "reference": "d517136448622bdfdc214440ff83156b0ce4121a"
+                "reference": "773d7b0a522df80cf1eae49e6bd9f365ab82fcbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mawuva/laravel-custom-view-components/zipball/d517136448622bdfdc214440ff83156b0ce4121a",
-                "reference": "d517136448622bdfdc214440ff83156b0ce4121a",
+                "url": "https://api.github.com/repos/mawuva/laravel-custom-view-components/zipball/773d7b0a522df80cf1eae49e6bd9f365ab82fcbe",
+                "reference": "773d7b0a522df80cf1eae49e6bd9f365ab82fcbe",
                 "shasum": ""
             },
             "require": {
@@ -2057,9 +2057,9 @@
             ],
             "support": {
                 "issues": "https://github.com/mawuva/laravel-custom-view-components/issues",
-                "source": "https://github.com/mawuva/laravel-custom-view-components/tree/v2.0.2"
+                "source": "https://github.com/mawuva/laravel-custom-view-components/tree/v2.0.4"
             },
-            "time": "2021-09-07T02:21:20+00:00"
+            "time": "2021-09-07T11:23:02+00:00"
         },
         {
             "name": "mawuekom/laravel-form-request",
